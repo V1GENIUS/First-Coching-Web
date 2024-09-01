@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import {  Routes, Route } from "react-router-dom";
 import './App.css';
+import Homepage from './Pages/Homepage';
+import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
+import Signup from './Pages/Login/Signup';
+// import Navbar from './Components/Navbar';
+import TermCondition from "./Pages/TermCondition";
 
-function App() {
+
+export default function MyApp() {   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <header>  
+
+    </header>
+      <Routes>
+                <Route path="Homepage" element={<Homepage />} />
+                <Route path="/AboutUs" element={<AboutUs />}/>
+                <Route path="/Signup" element={<Signup />} />
+                <Route path="/ContactUs" element={<ContactUs />} />
+                <Route path="/Term_Condition" element={<TermCondition />} />
+            </Routes>
+    </>
+    
   );
 }
-
-export default App;
